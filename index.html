@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <!-- HEADER DESIGN -->
+    <header class="header">
+        <a href="#" class="logo">Portfolio</a>
+
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
+
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- HOME SECTION DESIGN -->
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hi, Myself</h3>
+            <h1>Abdul Lateef</h1>
+            <h3>And I'm a <span class="multiple-text"></span></h3>
+            <p>
+                Full Stack Developer with vast knowledge in Python, Pthon Flask, HTML, CSS JavaScript...
+                Check my resume for more info. 
+            </p>
+            <div class="social-media">
+                <a href="wa.link/sabir8"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://github.com/Ikolawole2020"><i class="fa-brands fa-github"></i></a>
+            </div>
+            <a href="https://my-cv-qnvj.vercel.app/" class="btn">View CV</a>
+        </div>
+
+        <div class="home-img">
+            <img src="/avatar.avif"  alt="" style="border-radius: 50%;">
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="/avatar.avif" alt="" style="border-radius: 50%;">
+        </div>
+
+        <div class="about-content">
+            <h2 class="heading">ABOUT <span>Me</span></h2>
+            <h3>Backend Developer</h3>
+            <p>
+               My name is Tajudeen Abdul Lateef, an undergraduate of software engineering at NIIT (National Institute of information technology) Nigeria. With a passion for technology and a drive to suceed, i enjoy elegant interfaces and gaining exposure through multiple projects. I beleive i would excel in the collaborative enviroment for which your company prides itself
+            </p>
+            <a href="https://my-cv-3xd.vercel.app/" class="btn">Read-More</a>
+        </div>
+    </section>
+
+    <!-- SERVICE SECTION -->
+    <section class="services" id="services">
+        <h2 class="heading">My <span>Services</span></h2>
+
+        <div class="services-container">
+            <div class="services-box">
+                <i class="fa-solid fa-code"></i>
+                <h3>Web Development</h3>
+                <p>
+                    Writing well designed, testable, efficient code by using best software development practices
+                    Creating website layout/user interfaces by using standard HTML/CSS practices
+                    Integrating data from various back-end services and databases                </p>
+                <a href="#" class="btn">Read More</a>
+            </div>
+
+            <div class="services-box">
+                <i class="fa-solid fa-palette"></i>
+                <h3>Flask Developer</h3>
+                <p>
+                    Collaborate with other developers. Design and implement web applications which utilise the Flask framework . Write a wide variety of unit tests to ensure the code is meeting the software design requirements. Ensure the Python code is written to a high standard.                </p>
+                <a href="#" class="btn">Read More</a>
+            </div>
+
+            <div class="services-box">
+                <i class="fa-brands fa-android"></i>
+                <h3>App Development</h3>
+                <p>
+                    Understanding client requirements and how they translate to new application features
+                    Collaborating with development team and other IT staff to set specifications for new applications
+                    Writing high-quality code to program complete applications on schedule 
+                </p>
+                <a href="#" class="btn">Read More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO SECTION -->
+    <section class="portfolio" id="portfolio">
+        <h2 class="heading">Latest <span>Projects</span></h2>
+
+        <div class="portfolio-container">
+            <div class="portfolio-box">
+                <img src="/1.jpg" alt="">
+                <div class="portfolio-layer">
+                    <h4>Web Design</h4>
+                    <p>A restaurant website with HTML|CSS|JS</p>
+                    <a href="https://taste-it-wnl1.vercel.app/"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box">
+                <img src="/download (1).jpg" alt="">
+                <div class="portfolio-layer">
+                    <h4>Web Design</h4>
+                    <p>A food recipe website</p>
+                    <a href="https://food-project-sigma-livid.vercel.app/"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box">
+                <img src="/weather.avif" alt="">
+                <div class="portfolio-layer">
+                    <h4>Web Deisgn</h4>
+                    <p>An Weather Forecast Website with HTML|CSS|JS</p>
+                    <a href="https://forecast-two-red.vercel.app/"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- CONTACT SECTION -->
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Me</span></h2>
+        <form action="" id="myForm">
+            <div class="input-box">
+                <input type="text" name="name" placeholder="Full Name">
+                <input type="email" name="email" placeholder="Email Address">
+            </div>
+            <textarea name="message" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+            <button class="btn" type="submit">Send</button>
+        </form>
+    </section>
+    
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2024 by @BOSSTAJ | All rights reserved</p>
+        </div>
+
+        <div class="footer-iconTop">
+            <a href="#home"><i class="fa-solid fa-angle-up"></i></a>
+        </div>
+    </footer>
+
+    <!-- SCROLL REVEAL -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- TYPED JS -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- MAIN JS -->
+    <script src="/main.js"></script>
+</body>
+</html>
