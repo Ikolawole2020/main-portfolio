@@ -1,165 +1,632 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="/style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <title>Abdul Lateef — Portfolio</title>
+    <link rel="stylesheet" href="/style.css" />
 </head>
+
 <body>
-    <!-- HEADER DESIGN -->
-    <header class="header">
-        <a href="#" class="logo">Portfolio</a>
+    <div class="fx-canvas" aria-hidden="true">
+        <div class="fx-blob fx-blob--a"></div>
+        <div class="fx-blob fx-blob--b"></div>
+        <div class="fx-blob fx-blob--c"></div>
+        <div class="fx-grid"></div>
+        <div class="fx-noise"></div>
+    </div>
 
-        <i class="fa-solid fa-bars" id="menu-icon"></i>
+    <div class="scroll-progress" aria-hidden="true"></div>
+    <div class="cursor-glow" aria-hidden="true"></div>
 
-        <nav class="navbar">
-            <a href="#home" class="active">Home</a>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#contact">Contact</a>
+    <header class="topbar" id="top">
+        <a class="brand" href="#home">
+            <span class="brand__mark" aria-hidden="true">◆</span>
+            <span class="brand__text">BOSSTAJ</span>
+        </a>
+
+        <button class="menu" id="menu-icon" aria-label="Open menu" aria-expanded="false">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <nav class="nav" aria-label="Primary">
+            <a href="#home" class="nav__link is-active">Home</a>
+            <a href="#about" class="nav__link">About</a>
+            <a href="#services" class="nav__link">Services</a>
+            <a href="#projects" class="nav__link">Projects</a>
+            <a href="#tictactoe" class="nav__link">Neon Game</a>
+            <a href="#contact" class="nav__link">Contact</a>
         </nav>
     </header>
 
-    <!-- HOME SECTION DESIGN -->
-    <section class="home" id="home">
-        <div class="home-content">
-            <h3>Hi, Myself</h3>
-            <h1>Abdul Lateef</h1>
-            <h3>And I'm a <span class="multiple-text"></span></h3>
-            <p>
-                Full Stack Developer with vast knowledge in Python, Python Flask, HTML, CSS JavaScript...
-                Check my resume for more info. 
-            </p>
-            <div class="social-media">
-                <a href="wa.link/sabir8"><i class="fa-brands fa-whatsapp"></i></a>
-                <a href=""><i class="fa-brands fa-twitter"></i></a>
-                <a href=""><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://github.com/Ikolawole2020"><i class="fa-brands fa-github"></i></a>
+    <main>
+        <!-- HERO -->
+        <section class="section hero" id="home">
+            <div class="container hero__grid">
+                <div class="hero__copy">
+                    <p class="eyebrow">
+                        <span class="eyebrow__dot" aria-hidden="true"></span>
+                        Full-stack builder • Python/Flask • UI Engineering
+                    </p>
+
+                    <h1 class="title">
+                        I design <span class="title__glow">neon‑fast</span> experiences that convert.
+                    </h1>
+
+                    <p class="lead">
+                        Professional-grade web apps with clean architecture, glassy UI, and performance you can feel.
+                        I build interfaces that look premium and behave reliably.
+                    </p>
+
+                    <div class="hero__pills" role="list" aria-label="Highlights">
+                        <div class="pill" role="listitem"><i class="fa-solid fa-bolt"></i> Speed-first UI</div>
+                        <div class="pill" role="listitem"><i class="fa-solid fa-shield-halved"></i> Robust backend</div>
+                        <div class="pill" role="listitem"><i class="fa-solid fa-rocket"></i> Launch-ready delivery</div>
+                    </div>
+
+                    <div class="hero__cta">
+                        <a class="btn btn--primary" href="./TAJUDEEN ABDUL-LATEEF KOLAWOLE().pdf" download>
+                            <i class="fa-solid fa-download"></i>
+                            Download CV
+                        </a>
+                        <a class="btn btn--ghost" href="#projects">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                            View Projects
+                        </a>
+                    </div>
+
+                    <div class="typed-wrap" aria-label="Role typing">
+                        <span class="typed-label">I’m a</span>
+                        <span class="typed" id="typed-target"></span>
+                    </div>
+                </div>
+
+                <aside class="hero__panel" aria-label="Profile card">
+                    <div class="glass-card glass-card--hero">
+                        <div class="profile">
+                            <div class="profile__avatar">
+                                <img src="/avatar.avif" alt="" />
+                            </div>
+
+                            <div class="profile__meta">
+                                <h2 class="profile__name">Abdul Lateef</h2>
+                                <p class="profile__role">Software Engineer • Product-minded</p>
+                            </div>
+                        </div>
+
+                        <div class="divider" role="separator"></div>
+
+                        <div class="stats">
+                            <div class="stat">
+                                <div class="stat__value" data-count="18">0</div>
+                                <div class="stat__label">Completed builds</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat__value" data-count="6">0</div>
+                                <div class="stat__label">Neon UI systems</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat__value" data-count="40">0</div>
+                                <div class="stat__label">Client-ready features</div>
+                            </div>
+                        </div>
+
+                        <div class="glass-row">
+                            <a class="chip" href="https://wa.link/7a45u7" target="_blank" rel="noreferrer">
+                                <i class="fa-brands fa-whatsapp"></i> WhatsApp
+                            </a>
+                            <a class="chip" href="https://github.com/Ikolawole2020" target="_blank" rel="noreferrer">
+                                <i class="fa-brands fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </aside>
             </div>
-            <a href="https://mycv-ten-dusky.vercel.app/" class="btn">View CV</a>
-        </div>
 
-        <div class="home-img">
-            <img src="/avatar.avif"  alt="" style="border-radius: 50%;">
-        </div>
-    </section>
-
-    <!-- ABOUT SECTION -->
-    <section class="about" id="about">
-        <div class="about-img">
-            <img src="/avatar.avif" alt="" style="border-radius: 50%;">
-        </div>
-
-        <div class="about-content">
-            <h2 class="heading">ABOUT <span>Me</span></h2>
-            <h3>Backend Developer</h3>
-            <p>
-               My name is Tajudeen Abdul Lateef, an undergraduate of software engineering at NIIT (National Institute of information technology) Nigeria. With a passion for technology and a drive to suceed, i enjoy elegant interfaces and gaining exposure through multiple projects. I beleive i would excel in the collaborative enviroment for which your company prides itself
-            </p>
-            <a href="https://my-cv-3xd.vercel.app/" class="btn">Read-More</a>
-        </div>
-    </section>
-
-    <!-- SERVICE SECTION -->
-    <section class="services" id="services">
-        <h2 class="heading">My <span>Services</span></h2>
-
-        <div class="services-container">
-            <div class="services-box">
-                <i class="fa-solid fa-code"></i>
-                <h3>Web Development</h3>
-                <p>
-                    Writing well designed, testable, efficient code by using best software development practices
-                    Creating website layout/user interfaces by using standard HTML/CSS practices
-                    Integrating data from various back-end services and databases .               </p>
-                <a href="#" class="btn">Read More</a>
-            </div>
-
-            <div class="services-box">
-                <i class="fa-solid fa-palette"></i>
-                <h3>Flask Developer</h3>
-                <p>
-                    Collaborate with other developers. Design and implement web applications which utilise the Flask framework . Write a wide variety of unit tests to ensure the code is meeting the software design requirements. Ensure the Python code is written to a high standard.                </p>
-                <a href="#" class="btn">Read More</a>
-            </div>
-
-            <div class="services-box">
-                <i class="fa-brands fa-android"></i>
-                <h3>App Development</h3>
-                <p>
-                    Understanding client requirements and how they translate to new application features
-                    Collaborating with development team and other IT staff to set specifications for new applications
-                    Writing high-quality code to program complete applications on schedule 
-                </p>
-                <a href="#" class="btn">Read More</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- PORTFOLIO SECTION -->
-    <section class="portfolio" id="portfolio">
-        <h2 class="heading">Latest <span>Projects</span></h2>
-
-        <div class="portfolio-container">
-            <div class="portfolio-box">
-                <img src="/1.jpg" alt="">
-                <div class="portfolio-layer">
-                    <h4>Web Design</h4>
-                    <p>A restaurant website with HTML|CSS|JS</p>
-                    <a href="https://taste-it-wnl1.vercel.app/"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            <div class="container hero__strip">
+                <div class="strip glass-panel">
+                    <div class="strip__item">
+                        <div class="strip__icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                        <div>
+                            <div class="strip__title">Neon Glass UI</div>
+                            <div class="strip__text">Modern layout conventions + premium polish.</div>
+                        </div>
+                    </div>
+                    <div class="strip__item">
+                        <div class="strip__icon"><i class="fa-solid fa-diagram-project"></i></div>
+                        <div>
+                            <div class="strip__title">Clean Architecture</div>
+                            <div class="strip__text">Maintainable code, scalable patterns.</div>
+                        </div>
+                    </div>
+                    <div class="strip__item">
+                        <div class="strip__icon"><i class="fa-solid fa-chart-line"></i></div>
+                        <div>
+                            <div class="strip__title">Performance Focus</div>
+                            <div class="strip__text">Fast interactions, smooth motion, less bloat.</div>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <div class="portfolio-box">
-                <img src="/download (1).jpg" alt="">
-                <div class="portfolio-layer">
-                    <h4>Web Design</h4>
-                    <p>A food recipe website</p>
-                    <a href="https://food-project-sigma-livid.vercel.app/"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        <!-- ABOUT -->
+        <section class="section" id="about">
+            <div class="container two-col">
+                <div class="section-head">
+                    <h2 class="h2"><span class="h2__accent">About</span> me</h2>
+                    <p class="muted">
+                        I’m Tajudeen Abdul Lateef (Abdul Lateef) — a builder who cares about craft. I combine UI
+                        engineering with backend logic to
+                        ship projects that feel professional from day one.
+                    </p>
+                    <ul class="checklist" aria-label="What I’m great at">
+                        <li><i class="fa-solid fa-check"></i> Flask backend + clean routing</li>
+                        <li><i class="fa-solid fa-check"></i> JavaScript interactivity</li>
+                        <li><i class="fa-solid fa-check"></i> Responsive, accessible UI systems</li>
+                    </ul>
+                    <div class="actions">
+                        <a class="btn btn--ghost" href="#contact"><i class="fa-regular fa-paper-plane"></i> Hire Me</a>
+                    </div>
+                </div>
+
+                <div class="stack">
+                    <div class="glass-card glass-card--lift">
+                        <h3 class="h3">What clients get</h3>
+                        <p class="muted">A delivery style that’s clear, measurable, and reliable.</p>
+                        <div class="cards-row">
+                            <div class="micro-card"><i
+                                    class="fa-solid fa-compass-drafting"></i><b>Discovery</b><span>scope + goals</span>
+                            </div>
+                            <div class="micro-card"><i class="fa-solid fa-toolbox"></i><b>Build</b><span>clean
+                                    components</span></div>
+                            <div class="micro-card"><i class="fa-solid fa-bug"></i><b>Polish</b><span>bugs + UX</span>
+                            </div>
+                            <div class="micro-card"><i class="fa-solid fa-rocket"></i><b>Launch</b><span>handoff
+                                    ready</span></div>
+                        </div>
+                    </div>
+
+                    <div class="glass-card glass-card--wide">
+                        <h3 class="h3">Proof / credibility</h3>
+                        <div class="proof-grid">
+                            <div class="proof">
+                                <div class="proof__k">Fast UI</div>
+                                <div class="proof__v">Low-latency interactions</div>
+                            </div>
+                            <div class="proof">
+                                <div class="proof__k">Quality</div>
+                                <div class="proof__v">Readable code + consistent patterns</div>
+                            </div>
+                            <div class="proof">
+                                <div class="proof__k">Reliability</div>
+                                <div class="proof__v">Forms, validation, and stability</div>
+                            </div>
+                            <div class="proof">
+                                <div class="proof__k">Neon branding</div>
+                                <div class="proof__v">Premium glass + neon styling</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <div class="portfolio-box">
-                <img src="/crypto.jpg" alt="">
-                <div class="portfolio-layer">
-                    <h4>Web Deisgn</h4>
-                    <p>A Crypto Trading Site With Flask as Backend and SQLITE for Database</p>
-                    <a href="https://monarch01.pythonanywhere.com"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        <!-- SERVICES -->
+        <section class="section" id="services">
+            <div class="container">
+                <div class="section-head section-head--center">
+                    <h2 class="h2">Services with <span class="h2__accent">impact</span></h2>
+                    <p class="muted">Tap into capabilities built for modern client expectations.</p>
+                </div>
+
+                <div class="grid3">
+                    <article class="glass-card glass-card--hover" data-reveal>
+                        <div class="icon-badge"><i class="fa-solid fa-code"></i></div>
+                        <h3 class="h3">Web Development</h3>
+                        <p class="muted">Frontend + backend delivery with maintainable structure and polished UX.</p>
+                        <div class="tag-row">
+                            <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JS</span><span
+                                class="tag">APIs</span>
+                        </div>
+                    </article>
+
+                    <article class="glass-card glass-card--hover" data-reveal>
+                        <div class="icon-badge"><i class="fa-solid fa-layer-group"></i></div>
+                        <h3 class="h3">Flask Engineering</h3>
+                        <p class="muted">Routing, templates, forms, validation, and reliable server-side logic.</p>
+                        <div class="tag-row">
+                            <span class="tag">Flask</span><span class="tag">SQLite</span><span
+                                class="tag">Auth</span><span class="tag">Testing</span>
+                        </div>
+                    </article>
+
+                    <article class="glass-card glass-card--hover" data-reveal>
+                        <div class="icon-badge"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                        <h3 class="h3">App UI + Interactions</h3>
+                        <p class="muted">Interactive components, smooth animations, and responsive layouts that feel
+                            premium.</p>
+                        <div class="tag-row">
+                            <span class="tag">UI Systems</span><span class="tag">Motion</span><span
+                                class="tag">Responsive</span><span class="tag">A11y</span>
+                        </div>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- CONTACT SECTION -->
-    <section class="contact" id="contact">
-        <h2 class="heading">Contact <span>Me</span></h2>
-        <form action="" id="myForm">
-            <div class="input-box">
-                <input type="text" name="name" placeholder="Full Name">
-                <input type="email" name="email" placeholder="Email Address">
+        </section>
+
+        <!-- PROJECTS -->
+        <section class="section" id="projects">
+            <div class="container">
+                <div class="section-head">
+                    <h2 class="h2">Selected <span class="h2__accent">Projects</span></h2>
+                    <p class="muted">A mix of UI-focused builds and backend-driven solutions.</p>
+                </div>
+
+                        <article class="project-card" data-reveal>
+                        <div class="project-card__media">
+                            <img src="/novamart.png" alt="" />
+                            <div class="project-card__shine" aria-hidden="true"></div>
+                        </div>
+                        <div class="project-card__body glass-card glass-card--inner">
+                            <div class="project-card__top">
+                                <div>
+                                    <h3 class="h3">NOVAMART</h3>
+                                    <p class="muted">Expereience conveneint shopping with just a click.</p>
+                                </div>
+                                <a class="project-card__link" href="https://monarch01.pythonanywhere.com/"
+                                    target="_blank" rel="noreferrer" aria-label="Open project">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                            </div>
+                            <div class="project-card__meta">
+                                <span class="meta"><i class="fa-solid fa-clock"></i> 10 days</span>
+                                <span class="meta"><i class="fa-solid fa-gears"></i> UI + JS</span>
+                                <span class="meta"><i class="fa-solid fa-user-tie"></i> Frontend</span>
+                                <span class="meta"><i class="fa-solid fa-hashtag"></i> E-commerce</span>
+                                <span class="meta"><i class="fa-solid fa-bolt"></i>Backend</span>
+                            </div>
+                            <div class="tag-row">
+                                <span class="tag tag--neon">UX-first</span>
+                                <span class="tag">Layout</span>
+                                <span class="tag">Clean</span>
+                            </div>
+                        </div>
+                    </article>
+
+
+
+
+
+
+                <div class="project-grid">
+                    <article class="project-card" data-reveal>
+                        <div class="project-card__media">
+                            <img src="/1.jpg" alt="" />
+                            <div class="project-card__shine" aria-hidden="true"></div>
+                        </div>
+                        <div class="project-card__body glass-card glass-card--inner">
+                            <div class="project-card__top">
+                                <div>
+                                    <h3 class="h3">Taste-It</h3>
+                                    <p class="muted">Restaurant landing with clean UI + interactive sections.</p>
+                                </div>
+                                <a class="project-card__link" href="https://taste-it-wnl1.vercel.app/" target="_blank"
+                                    rel="noreferrer" aria-label="Open project">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                            </div>
+                            <div class="project-card__meta">
+                                <span class="meta"><i class="fa-solid fa-clock"></i> 2 weeks</span>
+                                <span class="meta"><i class="fa-solid fa-gears"></i> HTML/CSS/JS</span>
+                                <span class="meta"><i class="fa-solid fa-user-tie"></i> UI + layout</span>
+                            </div>
+                            <div class="tag-row">
+                                <span class="tag tag--neon">UI Polish</span>
+                                <span class="tag">Responsive</span>
+                                <span class="tag">Fast</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-reveal>
+                        <div class="project-card__media">
+                            <img src="/download (1).jpg" alt="" />
+                            <div class="project-card__shine" aria-hidden="true"></div>
+                        </div>
+                        <div class="project-card__body glass-card glass-card--inner">
+                            <div class="project-card__top">
+                                <div>
+                                    <h3 class="h3">Food Recipe Hub</h3>
+                                    <p class="muted">Explore recipes with a modern browsing experience.</p>
+                                </div>
+                                <a class="project-card__link" href="https://food-project-sigma-livid.vercel.app/"
+                                    target="_blank" rel="noreferrer" aria-label="Open project">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                            </div>
+                            <div class="project-card__meta">
+                                <span class="meta"><i class="fa-solid fa-clock"></i> 10 days</span>
+                                <span class="meta"><i class="fa-solid fa-gears"></i> UI + JS</span>
+                                <span class="meta"><i class="fa-solid fa-user-tie"></i> Frontend</span>
+                            </div>
+                            <div class="tag-row">
+                                <span class="tag tag--neon">UX-first</span>
+                                <span class="tag">Layout</span>
+                                <span class="tag">Clean</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-reveal>
+                        <div class="project-card__media">
+                            <img src="/health.jfif" alt="" />
+                            <div class="project-card__shine" aria-hidden="true"></div>
+                        </div>
+                        <div class="project-card__body glass-card glass-card--inner">
+                            <div class="project-card__top">
+                                <div>
+                                    <h3 class="h3">Health Status Dashboard</h3>
+                                    <p class="muted">Check your health status and chat with a consultant in a clean,
+                                        guided workflow.</p>
+                                </div>
+                                <a class="project-card__link" href="https://bitvista.pythonanywhere.com/"
+                                    target="_blank" rel="noreferrer" aria-label="Open project">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                            </div>
+                            <div class="project-card__meta">
+                                <span class="meta"><i class="fa-solid fa-clock"></i> 3 weeks</span>
+                                <span class="meta"><i class="fa-solid fa-gears"></i> Flask + UI</span>
+                                <span class="meta"><i class="fa-solid fa-user-tie"></i> Health UX</span>
+                            </div>
+                            <div class="tag-row">
+                                <span class="tag tag--neon">Healthcare UX</span>
+                                <span class="tag">Chat</span>
+                                <span class="tag">Diagnostics</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
             </div>
-            <textarea name="message" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
-            <button class="btn" type="submit">Send</button>
-        </form>
-    </section>
-    
+        </section>
+
+        <!-- TICTACTOE -->
+        <section class="section section--game" id="tictactoe">
+            <div class="container game">
+                <div class="section-head section-head--center">
+                    <h2 class="h2">Neon Lab: <span class="h2__accent">Tic‑Tac‑Toe</span></h2>
+                    <p class="muted">A tiny interactive demo to show responsiveness + UI polish.</p>
+                </div>
+
+                <div class="game__grid">
+
+                    <div class="glass-card game-card" data-reveal>
+                        <div class="game-card__top">
+                            <div>
+                                <div class="kicker">Status</div>
+                                <div class="game-status" id="ttt-status">X to play</div>
+                            </div>
+                            <button class="btn btn--ghost btn--small" id="ttt-restart" type="button">
+                                <i class="fa-solid fa-rotate-right"></i> Restart
+                            </button>
+                        </div>
+
+                        <div class="ttt" role="application" aria-label="Tic tac toe game">
+                            <div class="ttt__board" id="ttt-board" aria-label="Board"></div>
+                        </div>
+
+                        <div class="game-card__bottom">
+                            <div class="mode">
+                                <div class="kicker">Mode</div>
+                                <div class="seg" role="radiogroup" aria-label="Game mode">
+                                    <button class="seg__btn is-active" type="button" data-mode="pvp" role="radio"
+                                        aria-checked="true">
+                                        <i class="fa-solid fa-user-group"></i> 2 Players
+                                    </button>
+
+                                </div>
+
+                                <div class="divider divider--thin" role="separator"></div>
+
+                                <div class="kicker">Difficulty</div>
+                                <div class="muted small" style="margin-top:10px;">2-Players mode (CPU removed)</div>
+                            </div>
+
+
+                            <div class="scoreboard">
+                                <div class="score">
+                                    <div class="kicker">X</div>
+                                    <div class="score__v" id="ttt-xscore">0</div>
+                                </div>
+                                <div class="score">
+                                    <div class="kicker">O</div>
+                                    <div class="score__v" id="ttt-oscore">0</div>
+                                </div>
+                                <div class="score">
+                                    <div class="kicker">Draws</div>
+                                    <div class="score__v" id="ttt-drawscore">0</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <aside class="glass-card game-side" data-reveal>
+                        <h3 class="h3">Why this is here</h3>
+                        <p class="muted">This page includes a real interactive component—no shortcuts. It’s a signal of
+                            engineering maturity:</p>
+                        <ul class="checklist checklist--compact">
+                            <li><i class="fa-solid fa-check"></i> state management</li>
+                            <li><i class="fa-solid fa-check"></i> responsive UI</li>
+                            <li><i class="fa-solid fa-check"></i> smooth feedback</li>
+                        </ul>
+                        <div class="divider divider--thin" role="separator"></div>
+                        <p class="muted small">Tip: you can restart anytime to play a new match.</p>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- GAME 2: PING-PONG -->
+        <section class="section section--game" id="pingpong">
+            <div class="container game">
+                <div class="section-head section-head--center">
+                    <h2 class="h2">Neon Lab: <span class="h2__accent">Ping‑Pong</span></h2>
+                    <p class="muted">PVP + vs CPU in one neon canvas.</p>
+                </div>
+
+                <div class="game__grid">
+                    <div class="glass-card game-card" data-reveal>
+                        <div class="game-card__top">
+                            <div>
+                                <div class="kicker">Status</div>
+                                <div class="game-status" id="pp2-status">Loading…</div>
+                            </div>
+                            <button class="btn btn--ghost btn--small" id="pp2-restart" type="button">
+                                <i class="fa-solid fa-rotate-right"></i> Restart
+                            </button>
+                        </div>
+
+                        <canvas id="pp2-canvas" aria-label="Ping pong court"></canvas>
+
+                        <div class="game-card__bottom">
+                            <div class="pp2-mode" style="width:100%">
+                                <div class="kicker">Mode</div>
+                                <div class="seg" role="radiogroup" aria-label="Ping pong mode">
+                                    <button class="seg__btn is-active" type="button" data-pp2-mode="cpu" role="radio"
+                                        aria-checked="true">
+                                        <i class="fa-solid fa-robot"></i> vs CPU
+                                    </button>
+                                    <button class="seg__btn" type="button" data-pp2-mode="pvp" role="radio"
+                                        aria-checked="false">
+                                        <i class="fa-solid fa-user-group"></i> PVP
+                                    </button>
+                                </div>
+
+                                <div class="pp2-canvasnote">
+                                    Controls: vs CPU → <b>W/S</b> move left paddle. PVP → <b>W/S</b> & <b>↑/↓</b>.
+                                </div>
+
+                                <div class="pp2-scores" style="margin-top:14px">
+                                    <div class="pp2-score">
+                                        <div class="kicker">YOU / LEFT</div>
+                                        <div class="score__v" id="pp2-leftscore">0</div>
+                                    </div>
+                                    <div class="pp2-score">
+                                        <div class="kicker">CPU / RIGHT</div>
+                                        <div class="score__v" id="pp2-rightscore">0</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <aside class="glass-card game-side" data-reveal>
+                        <h3 class="h3">How it works</h3>
+                        <p class="muted">Neon glow + canvas physics. CPU tracks ball for solid play.</p>
+                        <div class="divider divider--thin" role="separator"></div>
+                        <p class="muted small">First to 7 points wins.</p>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="section" id="contact">
+            <div class="container">
+                <div class="section-head section-head--center">
+                    <h2 class="h2">Let’s build something <span class="h2__accent">serious</span></h2>
+                    <p class="muted">Send a message. I respond with clarity and next steps.</p>
+                </div>
+
+                <div class="contact-grid">
+                    <form class="glass-card contact" id="contactForm">
+                        <div class="form-row">
+                            <label>
+                                <span class="field-label">Full Name</span>
+                                <input name="name" type="text" placeholder="Your name" required />
+                            </label>
+                            <label>
+                                <span class="field-label">Email</span>
+                                <input name="email" type="email" placeholder="you@email.com" required />
+                            </label>
+                        </div>
+                        <label>
+                            <span class="field-label">What are you building?</span>
+                            <textarea name="message" rows="7" placeholder="Project goal, timeline, and details..."
+                                required></textarea>
+                        </label>
+
+                        <div class="form-actions">
+                            <button class="btn btn--primary" type="submit">
+                                <i class="fa-solid fa-paper-plane"></i> Send Message
+                            </button>
+                            <p class="muted small" id="formHint" aria-live="polite"></p>
+                        </div>
+                    </form>
+
+                    <div class="glass-card contact-info">
+                        <h3 class="h3">Direct links</h3>
+                        <p class="muted">If you prefer quick communication:</p>
+                        <div class="link-grid">
+                            <a class="contact-link" href="https://wa.link/7a45u7" target="_blank" rel="noreferrer">
+                                <i class="fa-brands fa-whatsapp"></i>
+                                <span>
+                                    <b>WhatsApp</b>
+                                    <span class="muted">Chat now</span>
+                                </span>
+                            </a>
+                            <a class="contact-link" href="https://github.com/Ikolawole2020" target="_blank"
+                                rel="noreferrer">
+                                <i class="fa-brands fa-github"></i>
+                                <span>
+                                    <b>GitHub</b>
+                                    <span class="muted">See work</span>
+                                </span>
+                            </a>
+                            <a class="contact-link" href="#" onclick="return false;">
+                                <i class="fa-solid fa-envelope"></i>
+                                <span>
+                                    <b>Email</b>
+                                    <span class="muted">Add your email</span>
+                                </span>
+                            </a>
+                        </div>
+
+                        <div class="divider" role="separator"></div>
+
+                        <div class="quote">
+                            <div class="quote__mark" aria-hidden="true">“</div>
+                            <p class="muted">Good design isn’t decoration — it’s conversion, clarity, and confidence.
+                            </p>
+                            <div class="quote__by">— Abdul Lateef</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
     <footer class="footer">
-        <div class="footer-text">
-            <p>Copyright &copy; 2024 by @BOSSTAJ | All rights reserved</p>
-        </div>
-
-        <div class="footer-iconTop">
-            <a href="#home"><i class="fa-solid fa-angle-up"></i></a>
+        <div class="container footer__inner">
+            <div class="footer__left">
+                <div class="brand-mini"><span class="brand__mark" aria-hidden="true">◆</span> BOSSTAJ</div>
+                <div class="muted small">© <span id="year"></span> Abdul Lateef. All rights reserved.</div>
+            </div>
+            <a class="to-top" href="#top" aria-label="Back to top">
+                <i class="fa-solid fa-arrow-up"></i>
+            </a>
         </div>
     </footer>
 
-    <!-- SCROLL REVEAL -->
+    <!-- External libs only used by JS already in this project -->
     <script src="https://unpkg.com/scrollreveal"></script>
-    <!-- TYPED JS -->
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <!-- MAIN JS -->
+    <link rel="stylesheet" href="/ttt2_game2_pingpong.css" />
+    <script src="/ttt2_game2_pingpong.js"></script>
     <script src="/main.js"></script>
 </body>
+
 </html>
