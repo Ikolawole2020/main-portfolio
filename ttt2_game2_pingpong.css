@@ -1,0 +1,83 @@
+.pp2-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 14px
+}
+
+.pp2-game {
+    padding: 22px
+}
+
+.pp2-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 14px
+}
+
+.pp2-status {
+    font-weight: 1000;
+    font-size: 16px;
+    color: rgba(255, 255, 255, .92)
+}
+
+.pp2-scores {
+    display: flex;
+    gap: 14px;
+    align-items: center
+}
+
+.pp2-score {
+    min-width: 90px;
+    padding: 12px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, .04);
+    border: 1px solid rgba(255, 255, 255, .10)
+}
+
+.pp2-score__v {
+    font-size: 22px;
+    font-weight: 1000;
+    margin-top: 6px
+}
+
+#pp2-canvas {
+    width: 100%;
+    height: 420px;
+    display: block;
+    border-radius: 22px;
+    border: 1px solid rgba(255, 255, 255, .10);
+    background: rgba(255, 255, 255, .02)
+}
+
+.pp2-mode .seg {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px
+}
+
+.pp2-canvasnote {
+    color: rgba(255, 255, 255, .66);
+    font-weight: 800;
+    font-size: 13px;
+    line-height: 1.4
+}
+
+.pp2-mode .seg__btn {
+    flex: 1;
+    padding: 12px 12px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, .12);
+    background: rgba(255, 255, 255, .04);
+    color: rgba(255, 255, 255, .78);
+    font-weight: 950;
+    cursor: pointer;
+    transition: transform .2s var(--ease), border-color .2s var(--ease), background .2s var(--ease)
+}
+
+.pp2-mode .seg__btn.is-active {
+    background: linear-gradient(135deg, rgba(0, 229, 255, .16), rgba(168, 85, 247, .16));
+    border-color: rgba(0, 229, 255, .35);
+    box-shadow: 0 0 26px rgba(0, 229, 255, .14);
+    color: rgba(255, 255, 255, .95)
+}

@@ -1,0 +1,10 @@
+Game 2 plan (cool mode):
+- Add a second Tic-Tac-Toe board to index.html (Game 2)
+- Game 2 rules: 2-Players, but board has a “power move” once per game:
+  - Player whose turn is X can choose one cell as normal move.
+  - Then they get a single “Neon Burst” action: after placing, they may mark a second empty cell (same turn).
+- UI: add a toggle button "Neon Burst" that is enabled only if burst available and it’s that player's turn.
+- main.js: refactor existing tic-tac-toe logic into a reusable function createTicTacToeGame({boardEl, statusEl, restartBtn, xScoreEl, oScoreEl, drawScoreEl})
+- Duplicate for Game 1 and Game 2.
+- Keep scores for each game separately.
+
